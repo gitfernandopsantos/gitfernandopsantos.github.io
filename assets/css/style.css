@@ -237,8 +237,8 @@ h6 {
 
 @media only screen and (max-width: 600px) {
   .imgStyle {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -257,7 +257,7 @@ h6 {
 /* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis) */
 @media only screen and (max-width: 600px) {
   .h2Animation {
-    font-size: 15px !important;
+    font-size: 10px !important;
     overflow: hidden;
     border-right: .15em solid #9f04ce;
     white-space: nowrap;
