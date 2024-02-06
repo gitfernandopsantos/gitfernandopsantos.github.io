@@ -18,6 +18,17 @@ body::before {
   z-index: -1;
 }
 
+.btn {
+  display: flex;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #333;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .iconCSharp {
   position: fixed;
   background: #040404 url("../img/icons/csharp_icon.svg") top right no-repeat;
@@ -219,8 +230,20 @@ h6 {
   text-align: center;
 }
 
+.imgStyle {
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .imgStyle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .h2Animation {
-  font-size: 50px;
+  font-size: 40px !important;
   overflow: hidden;
   border-right: .15em solid #9f04ce;
   white-space: nowrap;
@@ -229,6 +252,22 @@ h6 {
   animation:
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
+}
+
+/* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis) */
+@media only screen and (max-width: 600px) {
+  .h2Animation {
+    font-size: 15px !important;
+    overflow: hidden;
+    border-right: .15em solid #9f04ce;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: .15em;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    /* Tamanho do título ajustado para dispositivos móveis */
+  }
 }
 
 @keyframes typing {
@@ -253,26 +292,40 @@ h6 {
   }
 }
 
-button {
-  display: flex !important;
-  align-items: center !important;
-  text-align: center !important;
-  position: absolute !important;
-  top: 4.7% !important;
-  left: 74% !important;
-  background-color: #50184B !important;
-  color: #fff !important;
-  font-size: 16px !important;
-  padding: 10px 20px !important;
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
   border: none;
-  border-radius: 30px !important;
-  cursor: pointer !important;
-  transition: background-color 0.3s ease !important;
-  font-weight: bold !important;
+  background-color: #750353;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(179, 1, 111, 0.952);
+  transition: background-color 0.3s ease;
+  right: 17%;
+  top: 16%;
 }
 
-button:hover {
-  background-color: #8b00b6;
+/* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis) */
+@media only screen and (max-width: 768px) {
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    right: 10%;
+    top: 20%;
+  }
+}
+
+.btn:hover {
+  background-color: #7e044ff3;
+}
+
+
+.btn:hover::after {
+  opacity: 1;
 }
 
 .navbar a,
