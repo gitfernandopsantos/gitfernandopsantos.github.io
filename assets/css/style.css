@@ -237,8 +237,8 @@ h6 {
 
 @media only screen and (max-width: 600px) {
   .imgStyle {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -252,6 +252,7 @@ h6 {
   animation:
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
+  max-width: 85%;
 }
 
 /* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis) */
@@ -259,13 +260,13 @@ h6 {
   .h2Animation {
     font-size: 10px !important;
     overflow: hidden;
-    border-right: .15em solid #9f04ce;
+    border-right: .5em solid #9f04ce;
     white-space: nowrap;
     margin: 0;
-    letter-spacing: .15em;
+    letter-spacing: .5em;
     animation:
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+      typing 2.5s steps(30, end),
+      blink-caret .55s step-end infinite;
     /* Tamanho do título ajustado para dispositivos móveis */
   }
 }
