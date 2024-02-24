@@ -235,12 +235,64 @@ h6 {
   height: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .imgStyle {
     width: 15px;
     height: 15px;
   }
+} */
+
+@media screen and (max-width: 768px) {
+  .imgStyle {
+    width: 15px !important;
+    height: 15px !important;
+    padding: 10px;
+    display: inline-block;
+    animation: fadeBackground 3s infinite alternate;
+    /* Nome da animação, duração, tipo de animação e repetição */
+    background-color: rgba(196, 4, 255, 0.233);
+    /* Cor inicial */
+  }
 }
+
+/* Estilos para dispositivos com largura de tela entre 768px e 1024px (tablets em modo paisagem e notebooks) */
+@media screen and (min-width: 769px) and (max-width: 1399px) {
+  .imgStyle {
+    width: 38px !important;
+    height: 38px !important;
+    padding: 10px;
+    display: inline-block;
+    animation: fadeBackground 3s infinite alternate;
+    /* Nome da animação, duração, tipo de animação e repetição */
+    background-color: rgba(196, 4, 255, 0.233);
+    /* Cor inicial */
+  }
+}
+
+/* Estilos para dispositivos com largura de tela acima de 1024px (monitores) */
+@media screen and (min-width: 1400px) {
+  .imgStyle {
+    width: 45px !important;
+    height: 45px !important;
+    padding: 10px;
+    display: inline-block;
+    animation: fadeBackground 3s infinite alternate;
+    /* Nome da animação, duração, tipo de animação e repetição */
+    background-color: rgba(196, 4, 255, 0.233);
+    /* Cor inicial */
+  }
+}
+
+@keyframes fadeBackground {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .h2Animation {
   font-size: 40px !important;
@@ -255,7 +307,7 @@ h6 {
   max-width: 85%;
 }
 
-/* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis) */
+/* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis)
 @media only screen and (max-width: 600px) {
   .h2Animation {
     font-size: 10px !important;
@@ -268,6 +320,50 @@ h6 {
       typing 2.5s steps(30, end),
       blink-caret .55s step-end infinite;
     /* Tamanho do título ajustado para dispositivos móveis */
+/* }
+} */
+
+@media screen and (max-width: 768px) {
+  .h2Animation {
+    font-size: 15px !important;
+    overflow: hidden;
+    border-right: .1em solid #9f04ce;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: .1em;
+    animation:
+      typing 3.5s steps(30, end),
+      blink-caret .55s step-end infinite;
+  }
+}
+
+/* Estilos para dispositivos com largura de tela entre 768px e 1024px (tablets em modo paisagem e notebooks) */
+@media screen and (min-width: 769px) and (max-width: 1399px) {
+  .h2Animation {
+    font-size: 38px !important;
+    overflow: hidden;
+    border-right: .1em solid #9f04ce;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: .1em;
+    animation:
+      typing 3.5s steps(30, end),
+      blink-caret .55s step-end infinite;
+  }
+}
+
+/* Estilos para dispositivos com largura de tela acima de 1024px (monitores) */
+@media screen and (min-width: 1400px) {
+  .h2Animation {
+    font-size: 45.5px !important;
+    overflow: hidden;
+    border-right: .1em solid #9f04ce;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: .1em;
+    animation:
+      typing 3.5s steps(30, end),
+      blink-caret .55s step-end infinite;
   }
 }
 
