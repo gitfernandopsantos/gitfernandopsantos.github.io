@@ -145,6 +145,7 @@ h6 {
   #header h2 {
     font-size: 13px;
     line-height: 30px;
+    max-width: 100% !important
   }
 
   #header .social-links {
