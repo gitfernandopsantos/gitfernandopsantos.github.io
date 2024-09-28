@@ -143,7 +143,7 @@ h6 {
   }
 
   #header h2 {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 30px;
   }
 
@@ -300,6 +300,14 @@ h6 {
   to {
     width: 100%;
   }
+}
+
+.columnImg {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 /* Animação do cursor piscando */
@@ -546,15 +554,15 @@ section .container {
 
 @keyframes changeBackgroundColor {
   0% {
-    border-color: #5e0094;
+    border-color: #560171;
   }
 
   50% {
-    border-color: #790273;
+    border-color: #3c004f;
   }
 
   100% {
-    border-color: #a30096;
+    border-color: #2d013b;
   }
 
 }
@@ -567,7 +575,7 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -576,7 +584,7 @@ section .container {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #50184B;
+  background: #910284;
   margin: 4px 10px;
 }
 
@@ -706,7 +714,7 @@ section .container {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #50184B;
+  background-color: #6f0665;
 }
 
 /*--------------------------------------------------------------
@@ -714,10 +722,14 @@ section .container {
 --------------------------------------------------------------*/
 .interests .icon-box {
   display: flex;
-  align-items: center;
+  text-align: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgb(126 11 133 / 25%);
   transition: ease-in-out 0.3s;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .interests .icon-box i {
@@ -736,7 +748,7 @@ section .container {
 }
 
 .interests .icon-box:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgb(126 11 133 / 25%)
 }
 
 /*--------------------------------------------------------------
@@ -1196,14 +1208,15 @@ section .container {
 --------------------------------------------------------------*/
 .contact .info-box {
   color: #444444;
-  padding: 20px;
+  padding: 13px;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
+  max-width: 100%;
 }
 
 .contact .info-box i.bx {
   font-size: 24px;
-  color: #50184B;
+  color: #ffffff;
   border-radius: 50%;
   padding: 14px;
   float: left;
