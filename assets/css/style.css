@@ -46,12 +46,12 @@ body::before {
 }
 
 a {
-  color: #50184B;
+  color: #ffff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #50184B;
+  color: #ffff;
   text-decoration: none;
 }
 
@@ -143,7 +143,7 @@ h6 {
   }
 
   #header h2 {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 30px;
   }
 
@@ -230,59 +230,6 @@ h6 {
   text-align: center;
 }
 
-.imgStyle {
-  width: 50px;
-  height: 50px;
-}
-
-/* @media only screen and (max-width: 600px) {
-  .imgStyle {
-    width: 15px;
-    height: 15px;
-  }
-} */
-
-@media screen and (max-width: 768px) {
-  .imgStyle {
-    width: 15px !important;
-    height: 15px !important;
-    padding: 10px;
-    display: inline-block;
-    animation: fadeBackground 3s infinite alternate;
-    /* Nome da animação, duração, tipo de animação e repetição */
-    background-color: rgba(196, 4, 255, 0.233);
-    /* Cor inicial */
-  }
-}
-
-/* Estilos para dispositivos com largura de tela entre 768px e 1024px (tablets em modo paisagem e notebooks) */
-@media screen and (min-width: 769px) and (max-width: 1399px) {
-  .imgStyle {
-    width: 38px !important;
-    height: 38px !important;
-    padding: 10px;
-    display: inline-block;
-    animation: fadeBackground 3s infinite alternate;
-    /* Nome da animação, duração, tipo de animação e repetição */
-    background-color: rgba(196, 4, 255, 0.233);
-    /* Cor inicial */
-  }
-}
-
-/* Estilos para dispositivos com largura de tela acima de 1024px (monitores) */
-@media screen and (min-width: 1400px) {
-  .imgStyle {
-    width: 45px !important;
-    height: 45px !important;
-    padding: 10px;
-    display: inline-block;
-    animation: fadeBackground 3s infinite alternate;
-    /* Nome da animação, duração, tipo de animação e repetição */
-    background-color: rgba(196, 4, 255, 0.233);
-    /* Cor inicial */
-  }
-}
-
 @keyframes fadeBackground {
   0% {
     opacity: 0;
@@ -294,98 +241,88 @@ h6 {
 }
 
 
+.containerMsg {
+  word-wrap: break-word;
+}
+
 .h2Animation {
-  font-size: 40px !important;
+  font-size: 3rem;
   overflow: hidden;
   border-right: .15em solid #9f04ce;
   white-space: nowrap;
+  /* Evita quebra de linha durante a animação */
   margin: 0;
   letter-spacing: .15em;
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-  max-width: 85%;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  max-width: 100%;
 }
 
-/* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis)
-@media only screen and (max-width: 600px) {
-  .h2Animation {
-    font-size: 10px !important;
-    overflow: hidden;
-    border-right: .5em solid #9f04ce;
-    white-space: nowrap;
-    margin: 0;
-    letter-spacing: .5em;
-    animation:
-      typing 2.5s steps(30, end),
-      blink-caret .55s step-end infinite;
-    /* Tamanho do título ajustado para dispositivos móveis */
-/* }
-} */
+/* Depois que a animação de digitação termina, o texto pode quebrar a linha */
+.h2Animation::after {
+  content: '';
+  display: inline-block;
+  animation: post-typing 3.5s forwards;
+}
 
-@media screen and (max-width: 768px) {
+/* Responsividade para dispositivos menores (largura abaixo de 520px) */
+@media screen and (max-width: 520px) {
   .h2Animation {
-    font-size: 15px !important;
-    overflow: hidden;
+    font-size: 1.5rem;
     border-right: .1em solid #9f04ce;
-    white-space: nowrap;
-    margin: 0;
     letter-spacing: .1em;
-    animation:
-      typing 3.5s steps(30, end),
-      blink-caret .55s step-end infinite;
   }
 }
 
-/* Estilos para dispositivos com largura de tela entre 768px e 1024px (tablets em modo paisagem e notebooks) */
-@media screen and (min-width: 769px) and (max-width: 1399px) {
+/* Estilos para dispositivos com largura entre 520px e 768px */
+@media screen and (min-width: 520px) and (max-width: 768px) {
   .h2Animation {
-    font-size: 38px !important;
-    overflow: hidden;
+    font-size: 2rem;
     border-right: .1em solid #9f04ce;
-    white-space: nowrap;
-    margin: 0;
     letter-spacing: .1em;
-    animation:
-      typing 3.5s steps(30, end),
-      blink-caret .55s step-end infinite;
   }
 }
 
-/* Estilos para dispositivos com largura de tela acima de 1024px (monitores) */
-@media screen and (min-width: 1400px) {
+/* Estilos para dispositivos maiores que 768px */
+@media screen and (min-width: 768px) {
   .h2Animation {
-    font-size: 45.5px !important;
-    overflow: hidden;
-    border-right: .1em solid #9f04ce;
-    white-space: nowrap;
-    margin: 0;
-    letter-spacing: .1em;
-    animation:
-      typing 3.5s steps(30, end),
-      blink-caret .55s step-end infinite;
+    font-size: 3.5rem;
+    border-right: .2em solid #9f04ce;
+    letter-spacing: .2em;
   }
 }
 
+/* Animação de digitação */
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 
   to {
-    width: 100%
+    width: 100%;
   }
 }
 
+/* Animação do cursor piscando */
 @keyframes blink-caret {
 
   from,
   to {
-    border-color: transparent
+    border-color: transparent;
   }
 
   50% {
     border-color: #9f04ce;
+  }
+}
+
+/* Animação após a digitação: permitir quebra de linha */
+@keyframes post-typing {
+  0% {
+    white-space: nowrap;
+  }
+
+  100% {
+    white-space: normal;
   }
 }
 
@@ -566,7 +503,7 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0.9);
+  background: #5c0c9957;
   padding: 30px;
   border: 1px solid;
   animation: changeBackgroundColor 7s infinite;
@@ -659,7 +596,7 @@ section .container {
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #50184B;
+  color: #ffffff;
 }
 
 .about-me .content ul {
@@ -742,7 +679,7 @@ section .container {
 
 .idiomas {
   background-color: transparent;
-  color: #7a1b72;
+  color: #ffff;
   display: block;
 }
 
@@ -907,7 +844,7 @@ section .container {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #50184B;
+  color: #ffff;
   margin-bottom: 10px;
 }
 
@@ -940,8 +877,8 @@ section .container {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #50184B;
-  border: 2px solid #50184B;
+  background: #ffff;
+  border: 3px solid #9f04cea6;
 }
 
 /*--------------------------------------------------------------
@@ -1275,7 +1212,7 @@ section .container {
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffff;
   font-weight: 700;
   margin: 10px 0 8px 68px;
 }

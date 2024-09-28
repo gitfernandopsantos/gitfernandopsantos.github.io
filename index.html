@@ -37,8 +37,9 @@
     <div class="container">
 
       <h1><a href="index.html">Fernando Santos</a></h1>
-      <h2 class="h2Animation">Um humano <span>apaixonado pela Tecnologia
-          <img class="imgStyle" src="assets/img/code.png" alt="code"> </span></h2>
+      <div class="containerMsg">
+        <h2 class="h2Animation">Transformando ideias <span>em soluções inovadoras.</span></h2>
+      </div>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -103,36 +104,34 @@
               <div class="col-lg-12">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Idioma:</strong>
-                    <select class="idiomas">
-                      <option value="en-us">Inglês - Básico</option>
-                    </select>
+                    <label class="idiomas">Inglês - Básico</label>
+
                   </li>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <p>
-            Olá👋, meu nome é Fernando e tenho 22 anos. Sou estudante de desenvolvimento fullstack 📚
 
-            Atualmente, sou desenvolvedor de software júnior na APTA Soluções, atuando com:
+          <p>
+            Sou Fernando, estudante de Análise e Desenvolvimento de Sistemas, e atualmente atuo como
+            <strong>Desenvolvedor
+              Júnior na Apta Soluções.</strong>
             <br>
-            - Desenvolvimento em C#, .Net Framework, HTML, TypeScript, CSS, Framework Angular8 e ASP.NET
+            Tenho 22 anos e tenho experiência em diversas tecnologias, como <strong>C#, .NET, Angular 8, SQL e
+              PostgreSQL</strong>.
+            Minha jornada profissional é focada tanto no front-end quanto no back-end, <strong>sempre buscando soluções
+              eficazes e de alta qualidade 💻.</strong>
             <br>
-            - A linguagem para banco de dados que estou usando é SQL
+            Trabalho com REST APIs 🌐, utilizando o Entity Framework para operações CRUD, e sou adepto de metodologias
+            ágeis como Scrum 🚀. Além disso, tenho experiência na criação de interfaces interativas 🖥️ e na aplicação
+            de conceitos
+            de Programação Orientada a Objetos (POO) para manter o código modular e de fácil manutenção 🛠️.
             <br>
-            - E o banco relacional é o PostgreSQL
-            <br>
-            Busco obter novas experiências para adquirir um amplo conhecimento na área de desenvolvimento.
-            As minhas principais experiências que adquiri até hoje na minha trajetória profissional:
-            Desenvolvimento de aplicações Web (Angular 8),
-            Aplicação no modelo DDD (Domain Driver Design),
-            Aplicação na arquitetura ASP.Net MVC (Model, View, Controller),
-            Controle de versões com Git e Azure DevOps
-            Manipulação de DOM,
-            Auxilio Arquitetura MVC(Controller, Model e View),
-            Desenvolvimento de aplicativos para manipulação de banco de dados,
-            Auxiliar no desenvolvimento e implantação de serviços.
+            <strong>Estou constantemente em busca de novos desafios para expandir minhas habilidades e contribuir para
+              projetos
+              inovadores 💡.</strong> Se você está interessado em uma colaboração ou simplesmente deseja se conectar,
+            ficarei feliz em conversar 😊.
           </p>
         </div>
       </div>
@@ -543,24 +542,13 @@
   <script src="assets/js/main.js"></script>
   <script>
     function downloadCurriculo() {
-      // URL do currículo em PDF
-      var curriculoURL = 'https://drive.google.com/u/0/uc?export=download&id=16_az35LAHZ2CD__e6N22CIK_414jXGzM';
-
-      // Cria um elemento <a> invisível
+      var curriculoURL = 'https://drive.google.com/u/0/uc?export=download&id=1weZrODBaJ-giLv6x9R34kd50E01tqp87';
       var link = document.createElement('a');
       link.style.display = 'none';
       document.body.appendChild(link);
-
-      // Define a URL do currículo no atributo 'href' do elemento <a>
       link.href = curriculoURL;
-
-      // Define o nome do arquivo ao fazer o download
       link.download = 'curriculo.pdf';
-
-      // Simula um clique no link para iniciar o download
       link.click();
-
-      // Remove o elemento <a> após o download
       document.body.removeChild(link);
     };
   </script>
