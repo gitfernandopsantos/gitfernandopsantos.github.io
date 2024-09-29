@@ -39,7 +39,6 @@
           <li><a class="nav-link active" href="#header">Pagina Inicial</a></li>
           <li><a class="nav-link" href="#sobre">Sobre</a></li>
           <li><a class="nav-link" href="#experiencia">Experiências</a></li>
-          <li><a class="nav-link" href="#projetos">Projetos</a></li>
           <li><a class="nav-link" href="#contato">Contatos</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -104,6 +103,7 @@
           </div>
 
           <p>
+          <ul>
             Sou Fernando, estudante de Análise e Desenvolvimento de Sistemas, e atualmente atuo como
             <strong>Desenvolvedor
               Júnior na Apta Soluções.</strong>
@@ -122,6 +122,7 @@
               projetos
               inovadores 💡.</strong> Se você está interessado em uma colaboração ou simplesmente deseja se conectar,
             ficarei feliz em conversar 😊.
+          </ul>
           </p>
         </div>
       </div>
@@ -535,43 +536,71 @@
       </div>
 
       <div class="row project-grid">
+        <!-- Projeto 1 -->
         <div class="col-lg-4 col-md-6 project-item" data-aos="fade-up">
           <div class="project-card">
             <img src="assets/img/projetos/projeto1.jpg" class="img-fluid" alt="Projeto 1">
             <div class="project-info">
               <h4>Projeto 1</h4>
               <p>Descrição breve do projeto.</p>
-              <a href="#" class="btn">Ver Projeto</a>
+              <button href="#" class="btn" data-bs-toggle="modal" data-bs-target="#modalProjeto"
+                onclick="openModal('Projeto 1', 'Aqui estão mais detalhes sobre o Projeto 1.', ['assets/img/icons/AngularJS_icon.png', 'assets/img/icons/apirest.png', 'assets/img/icons/csharp_icon.png'])">Ver
+                Projeto</button>
+
             </div>
           </div>
         </div>
 
+        <!-- Projeto 2 -->
         <div class="col-lg-4 col-md-6 project-item" data-aos="fade-up" data-aos-delay="100">
           <div class="project-card">
             <img src="assets/img/projetos/projeto2.jpg" class="img-fluid" alt="Projeto 2">
             <div class="project-info">
               <h4>Projeto 2</h4>
               <p>Descrição breve do projeto.</p>
-              <a href="#" class="btn">Ver Projeto</a>
+              <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#modalProjeto"
+                onclick="openModal('Projeto 2', 'Aqui estão mais detalhes sobre o Projeto 2.')">Ver Projeto</a>
             </div>
           </div>
         </div>
 
+        <!-- Projeto 3 -->
         <div class="col-lg-4 col-md-6 project-item" data-aos="fade-up" data-aos-delay="200">
           <div class="project-card">
             <img src="assets/img/projetos/projeto3.jpg" class="img-fluid" alt="Projeto 3">
             <div class="project-info">
               <h4>Projeto 3</h4>
               <p>Descrição breve do projeto.</p>
-              <a href="#" class="btn">Ver Projeto</a>
+              <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#modalProjeto"
+                onclick="openModal('Projeto 3', 'Aqui estão mais detalhes sobre o Projeto 3.')">Ver Projeto</a>
             </div>
           </div>
         </div>
-
-        <!-- Adicione mais itens aqui -->
       </div>
     </div>
   </section>
+
+  <div class="modal fade" id="modalProjeto" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg"> <!-- Use 'modal-lg' para um modal maior -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" onclick="closeModal()" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <p id="modalDescription"></p>
+          <div id="imageList" class="d-flex flex-wrap justify-content-start">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal()" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <footer class="credits">
     Linkedin:<a href="https://www.linkedin.com/in/fernandopsds/" target="_blank"> Fernando Santos</a>
@@ -589,6 +618,7 @@
   <!-- Template Main e Funções do Sistema Web JS Arquivos -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/functions.js"></script>
+
 </body>
 
 </html>

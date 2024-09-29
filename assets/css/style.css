@@ -159,7 +159,28 @@ h6 {
   }
 }
 
-/* Header Top */
+.modal-content {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+}
+
+/* Título do modal */
+.modal-header {
+  background-color: #1e0531eb;
+  color: white;
+}
+
+
+.modal-body {
+  color: #212529;
+}
+
+.modal-footer .btn {
+  background-color: #1e0531eb;
+  color: white;
+}
+
 #header.header-top {
   height: 80px;
   position: fixed;
@@ -310,7 +331,6 @@ h6 {
   align-items: center !important;
 }
 
-/* Animação do cursor piscando */
 @keyframes blink-caret {
 
   from,
@@ -475,7 +495,6 @@ h6 {
   top: 16%;
 }
 
-/* Estilos para dispositivos com largura de tela menor ou igual a 768px (dispositivos móveis) */
 @media only screen and (max-width: 768px) {
   .btn {
     font-size: 14px;
@@ -1515,7 +1534,6 @@ footer {
     background: rgba(0, 0, 0, 0.8);
     flex-direction: row;
     flex-wrap: nowrap;
-    /* align-content: center; */
     align-items: center;
     justify-content: center;
   }
