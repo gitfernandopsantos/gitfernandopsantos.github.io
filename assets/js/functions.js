@@ -9,6 +9,33 @@ function downloadCurriculo() {
     document.body.removeChild(link);
 };
 
+
+//   document.querySelectorAll('.navbar a[href^="#"]').forEach(link => {
+//     link.addEventListener('click', function () {
+//       const header = document.getElementById('header');
+//       header.classList.add('header-top');
+//     });
+//   });
+
+
+const largura = window.innerWidth;
+const altura = window.innerHeight;
+
+console.log(`Largura: ${largura}px, Altura: ${altura}px`);
+
+function setLanguage(lang) {
+    const elements = document.querySelectorAll("[data-i18n]");
+    elements.forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = translations[lang][key] || key;
+    });
+  }
+
+  // Define idioma padrão
+  window.onload = () => setLanguage('pt');
+
+  
+
 function openModal(title, body, imageUrls) {
     document.getElementById('modalTitle').innerText = title;
     document.getElementById('modalDescription').innerText = body;
@@ -16,7 +43,7 @@ function openModal(title, body, imageUrls) {
 
     const imageList = document.getElementById('imageList');
     imageList.innerHTML = '';
-
+if(imageUrls != null){
     imageUrls.forEach(url => {
         const imgContainer = document.createElement('div');
         imgContainer.className = 'me-2 mb-2';
@@ -31,6 +58,8 @@ function openModal(title, body, imageUrls) {
         imgContainer.appendChild(img);
         imageList.appendChild(imgContainer);
     });
+}
+
 
     var modal = new bootstrap.Modal(document.getElementById('modalProjeto'));
     modal.show();
