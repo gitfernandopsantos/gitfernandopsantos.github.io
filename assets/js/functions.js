@@ -1,5 +1,5 @@
 function downloadCurriculo() {
-    var curriculoURL = 'https://drive.google.com/u/0/uc?export=download&id=1weZrODBaJ-giLv6x9R34kd50E01tqp87';
+    var curriculoURL = 'https://drive.google.com/uc?export=download&id=1fRgwrGLMinXVxbpDP0mjLaXJlrJ5T_hv';
     var link = document.createElement('a');
     link.style.display = 'none';
     document.body.appendChild(link);
@@ -8,15 +8,6 @@ function downloadCurriculo() {
     link.click();
     document.body.removeChild(link);
 };
-
-
-//   document.querySelectorAll('.navbar a[href^="#"]').forEach(link => {
-//     link.addEventListener('click', function () {
-//       const header = document.getElementById('header');
-//       header.classList.add('header-top');
-//     });
-//   });
-
 
 const largura = window.innerWidth;
 const altura = window.innerHeight;
